@@ -22,19 +22,12 @@ const Results: React.FC<ResultsProps> = ({ answers, questions }) => {
     }, []);
 
     const handleRetry = () => {
-        // Clear all quiz-related data from localStorage
-        localStorage.removeItem('quizState');
-        localStorage.removeItem('currentQuestionIndex');
-        localStorage.removeItem('answers');
-        localStorage.removeItem('timeLeft');
-
+        localStorage.clear();
         window.location.reload();
     };
 
     const handleLogout = () => {
-        // Clear all data from localStorage
         localStorage.clear();
-        // Redirect to the login page
         router.push('/');
     };
 

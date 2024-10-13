@@ -4,14 +4,14 @@ import { useRouter } from 'next/navigation';
 import Question from './Question';
 import Timer from './Timer';
 import Results from './Results';
-import { saveQuizState, loadQuizState, clearQuizState } from '../utils/localStorage';
+import { saveQuizState, loadQuizState } from '../utils/localStorage';
 import { Question as QuestionType, QuizState } from '../types';
 
 const Quiz: React.FC = () => {
     const [questions, setQuestions] = useState<QuestionType[]>([]);
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState<number>(0);
     const [answers, setAnswers] = useState<boolean[]>([]);
-    const [timeLeft, setTimeLeft] = useState<number>(300); // 5 minutes
+    const [timeLeft, setTimeLeft] = useState<number>(0);
     const [quizFinished, setQuizFinished] = useState<boolean>(false);
     const [error, setError] = useState<string | null>(null);
     const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -31,7 +31,7 @@ const Quiz: React.FC = () => {
                     // Reset other state variables
                     setCurrentQuestionIndex(0);
                     setAnswers([]);
-                    setTimeLeft(300);
+                    setTimeLeft(60);
                     setQuizFinished(false);
                 } else {
                     throw new Error("Invalid data structure received from API");
@@ -90,7 +90,6 @@ const Quiz: React.FC = () => {
             setCurrentQuestionIndex(currentQuestionIndex + 1);
         } else {
             setQuizFinished(true);
-            clearQuizState();
         }
     };
 

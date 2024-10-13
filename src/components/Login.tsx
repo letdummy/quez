@@ -8,10 +8,7 @@ const Login: React.FC = () => {
 
     useEffect(() => {
         // Clear any existing quiz state when the login page loads
-        localStorage.removeItem('quizState');
-        localStorage.removeItem('currentQuestionIndex');
-        localStorage.removeItem('answers');
-        localStorage.removeItem('timeLeft');
+        localStorage.clear();
     }, []);
 
     const handleLogin = (e: React.FormEvent) => {

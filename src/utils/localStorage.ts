@@ -8,7 +8,3 @@ export const loadQuizState = (): QuizState | null => {
     const state = localStorage.getItem('quizState');
     return state ? JSON.parse(state) : null;
 };
-
-export const clearQuizState = (): void => {
-    localStorage.removeItem('quizState');
-};
