@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# QuEZ
 
-## Getting Started
+This repository contains the frontend application quez, a coding challange for Frontend React.js internship @dot.indonesia
 
-First, run the development server:
+## 🔧 Tech Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Next.js 14
+- React 18
+- TypeScript
+- TailwindCSS
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📋 Prerequisites
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Please refer to `package.json` for a complete list of dependencies. Key requirements include:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🏃‍♂️ Running the Application
 
-## Learn More
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/letdummy/quez.git
+   cd quez
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. Start the development server:
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The application will be available at `http://localhost:3000`
 
-## Deploy on Vercel
+The app will soon be available online for everyone to access.
+## 📚 Available Scripts
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `npm run dev` - Runs the app in development mode
+- `npm run build` - Builds the app for production
+- `npm run start` - Runs the built app in production mode
+- `npm run lint` - Runs the linter
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a new branch
+3. Make your changes
+4. Submit a pull request
+
+## 🔮 Future Improvements
+
+- [ ] Add interactive landing page 
+- [ ] Add dificulty option
+- [ ] Improve UI/UX
+- [ ] Implement scoreboard
