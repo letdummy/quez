@@ -22,7 +22,7 @@ const Results: React.FC<ResultsProps> = ({ answers, questions }) => {
     }, []);
 
     const handleRetry = () => {
-        localStorage.clear();
+        localStorage.removeItem("quizState");
         window.location.reload();
     };
 
